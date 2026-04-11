@@ -1,0 +1,16 @@
+<routes>
+
+    <vType id="car" accel="2.6" decel="4.5" length="5" maxSpeed="13.9"/>
+
+    <route id="r_NS" edges="N2C C2S"/>
+    <route id="r_SN" edges="S2C C2N"/>
+    <route id="r_EW" edges="E2C C2W"/>
+    <route id="r_WE" edges="W2C C2E"/>
+
+    <!-- IMPORTANT: USE PERIOD INSTEAD OF NUMBER -->
+    <flow id="f1" route="r_NS" begin="0" end="800" period="2"/>
+    <flow id="f2" route="r_SN" begin="0" end="800" period="2"/>
+    <flow id="f3" route="r_EW" begin="0" end="800" period="3"/>
+    <flow id="f4" route="r_WE" begin="0" end="800" period="3"/>
+
+</routes>

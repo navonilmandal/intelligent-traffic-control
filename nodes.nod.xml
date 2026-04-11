@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  NODE FILE
+  Defines the junction points of the road network.
+  Coordinates are in meters. C is at origin (0,0).
+  The 4 outer nodes are 300m away in each direction.
+-->
+<nodes>
+
+    <!-- CENTER junction — type="traffic_light" tells SUMO to place a TLS here -->
+    <node id="C" x="0.00"    y="0.00"    type="traffic_light"/>
+
+    <!-- OUTER endpoints — these are just road entry/exit points, no signals -->
+    <node id="N" x="0.00"    y="300.00"  type="priority"/>
+    <node id="S" x="0.00"    y="-300.00" type="priority"/>
+    <node id="E" x="300.00"  y="0.00"    type="priority"/>
+    <node id="W" x="-300.00" y="0.00"    type="priority"/>
+
+</nodes>
