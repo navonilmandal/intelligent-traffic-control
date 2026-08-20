@@ -52,8 +52,45 @@ The system dynamically controls traffic signals based on real-time congestion.
 | Queue + PSO + GA | Slight refinement |
 
 ---
+## 🛠️ Setup & Installation
+
+### Prerequisites
+
+- Python 3.8+
+- [SUMO (Simulation of Urban Mobility)](https://sumo.dlr.de/docs/Downloads.php) installed, with the `SUMO_HOME` environment variable set
+  - On Linux/macOS: `export SUMO_HOME="/usr/share/sumo"` (adjust path to your install)
+  - On Windows: set `SUMO_HOME` via System Properties → Environment Variables, pointing to your SUMO install directory
+
+### Install dependencies
+
+​```bash
+git clone https://github.com/navonilmandal/intelligent-traffic-control.git
+cd intelligent-traffic-control
+pip install -r requirements.txt
+​```
+
+### Verify SUMO is available
+
+​```bash
+sumo --version
+​```
+
+If this fails, double check `SUMO_HOME` is set and that SUMO's `bin` directory is on your `PATH`.
+
+---
+
+## 📤 Output
+
+Running `python main.py --compare` will:
+
+- Simulate both the baseline (fixed-timing) and optimized (queue + PSO/GA) traffic control strategies
+- Save performance metrics to `baseline_metrics.json` and `optimized_metrics.json`
+- Generate comparison plots: `comparison.png`, `optimized.png`
+
+---
 
 ## ▶️ How to Run
 
 ```bash
 python main.py --compare
+```
